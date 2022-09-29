@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+:root {
+  --light: rgb(252, 246, 255);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+  background: linear-gradient(90deg, rgb(222 180 255), rgb(160 171 255));
+}
+
+.wrapper {
+  max-width: 350px;
+  margin: 2rem auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(315deg, #211352 0%, #170f30 74%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.59);
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #27175e;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--light);
+}
+
+.buttons-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+  padding: 10px 0;
+}
+
+.button {
+  padding: 1.3rem 0;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: var(--light);
+  background-color: #8128c5;
+  transition: 0.3s ease;
+  cursor: pointer;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.482);
+}
+
+.button:hover {
+  background-color: #ac46ff;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.503);
+}
+
+.operator {
+  background-color: #979dda;
+}
+.operator:hover {
+  background-color: #7a80c4;
+}
+
+.equals {
+  grid-column: 3/5;
+  background-color: #c93279;
+}
+
+.equals:hover {
+  background-color: #ff2a8d;
 }
